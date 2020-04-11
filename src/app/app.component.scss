@@ -1,0 +1,141 @@
+// .container{
+//     background-color: yellow;
+//         padding-left: 0px;
+//         padding-right:0px;
+
+// }
+// .rowwww{
+//          margin-right: 0px; 
+//     margin-left: 0px; 
+
+// }
+
+::ng-deep{
+  
+label.mat-form-field-label {
+    color: #fff !important;
+}
+
+.mat-input-element {
+    caret-color: #ffffff;
+}
+
+
+.mat-input-element {
+    color: #fff !important;
+}
+
+.mat-form-field-label {
+    color: rgb(255, 255, 255);
+}
+ 
+.mat-input-element::-webkit-input-placeholder { /* Edge */
+  color: #969292;
+}
+
+.mat-input-element:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #969292;
+}
+
+.mat-input-element::placeholder {
+  color: #969292;
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: rgba(255, 255, 255, 0.42);
+}
+.mat-radio-outer-circle {
+    border-color: white;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+}
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: #41b53f;
+}
+.mat-step-header .mat-step-icon {
+    background-color: rgba(245, 245, 245, 0.54);
+    color: black;
+}
+.mat-horizontal-stepper-header::before, .mat-horizontal-stepper-header::after, .mat-stepper-horizontal-line {
+    border-top-color: rgb(247, 253, 251);
+}
+.mat-step-header .mat-step-label.mat-step-label-active {
+    color: #41b53f;
+    font-weight: 500;
+}
+body .ui-button {
+    margin: 0;
+    color: #ffffff;
+    background-color: #41b53f; 
+    border: 1px solid #1bc130;
+}
+body .ui-fileupload-choose:not(.ui-state-disabled):hover {
+    background-color: #119027;
+    color: #ffffff;
+    border-color: #41b53f;
+}
+body .ui-button:enabled:hover {
+    background-color: #119027;
+    color: #ffffff;
+    border-color: #41b53f;
+}
+body .ui-datepicker {
+    padding: 0.857em;
+    min-width: 20em;
+    background-color: #000000;
+    color: #f3e9e9;
+    border: 1px solid #41b53f;
+}
+body .ui-datepicker:not(.ui-state-disabled) table td a:not(.ui-state-active):not(.ui-state-highlight):hover {
+    background-color: #41b53f;
+}
+body .ui-datepicker table td.ui-datepicker-today > a.ui-state-active, body .ui-datepicker table td.ui-datepicker-today > span.ui-state-active {
+    color: #ffffff;
+    background-color: #119027;
+}
+body .ui-datepicker table td > a, body .ui-datepicker table td > span {
+    color: white;
+}
+body .ui-datepicker .ui-datepicker-header {
+    padding: 0.429em 0.857em 0.429em 0.857em;
+    background-color: #0f5a0e;
+    color: white;
+    border-radius: 0;
+}
+.mat-dialog-container {
+    padding: 0px!important; 
+    overflow: visible!important;
+}
+.mat-header-cell {
+    color: 41b53f;
+}
+.mat-cell, .mat-footer-cell {
+    color: white;
+}
+.mat-row, mat-header-row, mat-footer-row, th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    border-bottom-color: rgba(17, 185, 61, 0.58);
+}
+.mat-header-cell {
+    color: #41b53f
+} 
+.mat-table {
+    background: black;
+}
+.mat-paginator {
+    background: #41b53f;
+}
+.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
+    background-color: rgba(173, 189, 177, 0.07);
+}
+.mat-badge-medium.mat-badge-after .mat-badge-content {
+    right: 123px!important;
+}
+.mat-badge-medium.mat-badge-above .mat-badge-content {
+    top: 0px!important;
+}
+.navbar-light .navbar-toggler {
+    background-color: #41b53f;
+    color: rgba(19, 236, 26, 0.98);
+    border-color: rgba(71, 230, 69, 0.57);
+}
+}

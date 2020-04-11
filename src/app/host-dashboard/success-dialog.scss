@@ -1,0 +1,12 @@
+ 
+.mat-input-element::-webkit-input-placeholder { /* Edge */
+  color: black;
+}
+
+.mat-input-element:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+.mat-input-element::placeholder {
+  color: black;
+}
