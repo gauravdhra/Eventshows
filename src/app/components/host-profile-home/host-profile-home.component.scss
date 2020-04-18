@@ -1,0 +1,95 @@
+.landing{  
+    position: relative;
+    background: #000000;    
+    color: #3F3F40;
+    height: fit-content;
+    width: 100%;
+}
+
+.mainpage{
+    margin-top: 100px;
+    height: 325px;
+    margin-bottom: 30px;
+}
+h3{
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+}
+.about{
+    margin-bottom: 20px;
+    p{
+        color: #999999;
+        font-size: 14px;
+    }
+}
+
+button{
+    margin-top: 20px;
+    background: #459C00;
+    border: 1px solid #459C00;
+    padding: 10px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.social-links{
+    display: flex;
+    a{
+        font-family: FontAwesome;      
+        font-size: 15px;        
+        color: white;
+    }
+
+    .set-links{
+        background: #181818;
+        height: 35px;
+        width: 35px;
+        padding: 4px 10px;        
+        margin-right: 10px;
+        border-radius: 20px;    
+    }
+  }  
+
+.profile{
+    .texture{
+        height: 150px;
+        width: 100%;
+        background: white;
+        position: relative;
+    }
+    
+    .profile-pic{
+        display: flex;
+        justify-content: center;
+        img{
+            border: 1px solid #989898;
+            position: absolute;
+            top: 173px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+        }
+        .username{
+            margin-top: 60px;
+            font-weight: 500;
+            font-size: 26px;
+            color: #ffffff;
+            line-height: 20px;
+        }
+    }
+}
+
+.events{
+    .eventpic{
+        display: flex;
+        img{
+            height: 151px;
+            width: 175px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+    }
+}

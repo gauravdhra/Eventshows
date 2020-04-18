@@ -2,18 +2,24 @@
 @import '~@angular/material/theming';
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
+#zmmtg-root {
+    display: none;
+  }
 
-html, body { height: 100%; }
-body { margin: 30px; font-family: Lato; }
-.container{
-    background-color: black;
-    color: white;
+  html, body {
+    min-width: 0 !important;    
+  }
+
+  body {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+  }
+
+//   .container{
+//     background-color: black;
+//     color: white;
     
-}
-p {
-    text-align:left;
-  font-family: Lato;
-}
+// }
 
 $mat-myapp-primary: (
     50 : #e8f6e8,

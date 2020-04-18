@@ -1,0 +1,53 @@
+<div class="landing">
+    <app-header></app-header>
+    <div class="profile">
+        <div class="texture">
+            <!-- this is texture -->
+        </div>
+        <div class="profile-pic">            
+            <img src="../../../assets/images/logo.png">
+            <p class="username">Sarah Smith</p>
+        </div>        
+    </div>
+    <div class="mainpage">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="events">
+                        <h3>My Events</h3>
+                        <div class="eventpic">
+                            <div>
+                                <img src="../../../assets/images/landing_page.png">
+                            </div>
+                            <div>
+                                <img src="../../../assets/images/landing_host.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about">
+                        <h3>About Me</h3>
+                        <p>Deserunt duis non adipisicing fugiat ea velit laboris occaecat cupidatat Lorem nostrud. 
+                            Laboris magna magna quis proident reprehenderit velit. 
+                            Ipsum velit dolor sunt sit magna eu Lorem anim laboris excepteur sit nostrud adipisicing.
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <div class="set-links">
+                            <a class="fab fa-facebook-f"></a>
+                        </div>                        
+                        <div class="set-links">
+                            <a class="fab fa-youtube-play"></a>
+                        </div>
+                        <div class="set-links">
+                            <a class="fab fa-instagram"></a>
+                        </div>                        
+                    </div>
+                    <button [routerLink]="['/hostDashboard-overview']" routerLinkActive="router-link-active">Donate to Sarah</button>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <app-main-footer></app-main-footer>
+</div>

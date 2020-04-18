@@ -1,0 +1,91 @@
+<div class="landing">
+    <app-header></app-header>
+<div class="container">
+    <h3 class="heading">Edit Your Online Event</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <form [formGroup]="firstFormGroup">
+
+                <p>
+                    <mat-form-field class="example-full-width" appearance="legacy">
+                        <mat-label>Event title</mat-label>
+                        <input matInput formControlName="title" required placeholder="Live comedy show">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline" class="example-full-width">
+                        <mat-label>Event Description</mat-label>
+                        <textarea matInput formControlName="description" required rows="3" cols="100"
+                            placeholder="Live comedy show featuring Dj Nakhel and Tony van on exclusive private youtube live  event!"></textarea>
+                    </mat-form-field>
+                </p>
+                <div class="">
+                    <label id="example-radio-group-label">Is You Event Public Or Private?</label>
+                    <mat-radio-group formControlName="privacy" aria-labelledby="example-radio-group-label"
+                        class="radioprivacy" [(ngModel)]="isPublic">
+                        <mat-radio-button class="example-radio-button" [value]="true">
+                            Public
+                        </mat-radio-button>
+                        <mat-radio-button class="example-radio-button" [value]="false">
+                            Private
+                        </mat-radio-button>
+                    </mat-radio-group>
+
+                </div>
+
+                <p-fileUpload required name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
+                    multiple="multiple" accept="image/*" maxFileSize="1000000">
+                    <ng-template pTemplate="content">
+                        <ul *ngIf="uploadedFiles.length">
+                            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                        </ul>
+                    </ng-template>
+                </p-fileUpload>
+
+                <div *ngFor="let host of hosts.controls; let i = index">
+                    <div formArrayName="hosts">
+                        <mat-form-field class="example-form-field">
+                            <mat-label>Co-Host</mat-label>
+
+                            <input [formControlName]="i" matInput type="text" placeholder="abc@email.com">
+                            <button color="warn" mat-button matSuffix mat-icon-button (click)="removeHost(i)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+
+                        </mat-form-field>
+                    </div>
+                </div>
+                <button (click)="addHost()" mat-mini-fab aria-label="Example button icon">
+                    <mat-icon>add</mat-icon>
+                </button>Add New Co-Host
+
+            </form>
+        </div>
+
+
+
+        <div class="col-md-6">
+            <div class="calendarEvent">
+                <!-- <div class="ui-g-6 ui-md-4"> -->
+
+                <p-calendar [inline]="true" placeholder="Select date and time" [(ngModel)]="eventSchedule"
+                    [showTime]="true">
+                    <p-header>
+                        <mat-label>Select Event Date </mat-label>
+                    </p-header>
+                </p-calendar>
+
+                <!-- </div> -->
+            </div>
+        </div>
+
+
+
+    </div>
+    <div>
+        <button mat-raised-button color="primary" (click)="editEvent()">Save</button>
+    </div>
+</div>
+</div>
+<app-main-footer></app-main-footer>

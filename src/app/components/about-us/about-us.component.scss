@@ -1,0 +1,153 @@
+.landing{
+    height: fit-content;
+    background-color: #0d0d0d;
+}
+.baner{
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    left: 0px;
+    top: 0px;
+    background: url("../../../assets/images/about-banner.svg") no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    }
+    .containersection{
+        background-color: #0d0d0d;
+        width: 100%;        
+    }
+    .about{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 52px;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+    }
+    
+    .jumbotron {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+        color: inherit;
+        background-color: #1A1A1A;
+    }
+    img.abouticon{
+        position: absolute;
+        width: 50px;
+        height: 55.04px;
+        left: calc(47% - 50px/2 + 226px);
+        top: 2px;
+    }
+    .aboutcontent{
+        position: relative;
+        min-height: 150px;
+        top: 0px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: justify;
+    
+    }
+    .aboutconenthighlight{
+        letter-spacing: 0.2px;
+    color: #4FB400;
+    }
+    .aboutimgone{
+    
+        position: relative;
+        width: 368px;
+        height: 265px;
+        left: 0px;
+        top: 0px;
+        border-radius: 8px;
+    }
+    .aboutimagetwo{
+        position: relative;
+        width: 380px;
+        height: 200px;
+        left: -30px;
+        top: 0px;
+    }
+    .aboutimagethree{
+        position: relative;
+        width: 379px;
+        height: 200px;
+        left: -25px;
+        top: 0px;
+        border-radius: 8px;
+    }
+    .createevent{
+        position: relative;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 18px;
+        display: flex;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+        background: #4FB400;
+        border-radius: 3px;
+        width: 175px;
+        height: 65.58px;
+        left: 75px;
+        top: -36px;
+        padding-left: 25px;
+        border: none;
+    }
+    
+    .eventbtn{
+        position: relative;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 18px;
+        display: flex;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+        background: #4FB400;
+        border-radius: 3px;
+        width: 175px;
+        height: 65.58px;
+        left: 75px;
+        top: 25px;
+        padding-left: 25px;
+        border: none;
+    }
+    
+    
+    .donatebtn{
+        position: relative;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 18px;
+        display: flex;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+        background: #4FB400;
+        border-radius: 3px;
+        width: 175px;
+        height: 65.58px;
+        left: 29px;
+        top: 24px;
+        padding-left: 25px;
+        border: none;
+    }
+    
+    .minheight{
+        min-height: 320px;
+    }
+    
+    @media screen and (max-width: 767px) {
+        .row.content {height: auto;} 
+      }
+    
+    

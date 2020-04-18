@@ -1,0 +1,176 @@
+<div class="landing">
+    <div class="side-nav">
+        <div class="top-nav">
+            <img src="../../../assets/images/Sairyo_logo/High-Resolution PNG/final5.png" (click)="onHomeClick()">
+        </div>
+        <div class="nav-icons">
+            <span class="material-icons add" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">add</span>
+            <span class="material-icons event" [routerLink]="['/eventlist']" routerLinkActive="router-link-active">event_note</span>
+            <span class="material-icons request-money" [routerLink]="['/payoutlist']" routerLinkActive="router-link-active">event_note</span>
+        </div>
+        <div class="bottom-nav">
+            <img src="../../../assets/images/testImage.jpg" [routerLink]="['/hostprofile-home']" routerLinkActive="router-link-active">
+            <span class="material-icons settings" (click)="onSettingsClick()">settings</span>
+        </div>
+    </div>        
+    <div class="host-nav" *ngIf="!home">
+        <div class="host-bar">
+            <p (click)="onSettingsClick()" [ngStyle]="{'color':settings ? 'white' : '#787878' }">Account Settings</p>
+            <span>|</span>
+            <p (click)="onProfileClick()" [ngStyle]="{'color':profile ? 'white' : '#787878' }">Profile Settings</p>
+        </div>
+    </div>
+    <div *ngIf="home">
+    <div class="performance">
+        <h3>Performance</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 this-month">
+                    <p>This Month</p>
+                    <div class="pay-info">
+                        <h2>$ 256</h2>
+                        <p>View Payouts &#8594;</p>
+                    </div>                    
+                </div>
+                <div class="col-md-9 all-earning">
+                    <p>All Time Earnings</p>
+                    <app-bar-chart></app-bar-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="myevents">
+        <h3>My Events</h3>
+        <div class="container">
+            <div class="row">
+                <div class="images">
+                    <img src="../../../assets/images/testImage.jpg">
+                </div>
+                <div class="images">
+                    <img src="../../../assets/images/testImage.jpg">
+                </div>
+                <div class="images">
+                    <img src="../../../assets/images/testImage.jpg">
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<section #accountsettings *ngIf="settings">
+    <div class="account">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="account-left">
+                        <h3>Account Settings</h3>
+                        <form class="form-body">
+                            <div class="labeling">
+                                <label>Email Address</label>
+                                <span>Email address cannot be changed.</span>    
+                            </div>
+                            <input type="text" value="sarahsmith@gmail.com" disabled>
+                            <button>Change your password</button>
+                            <hr>
+                            <label>Public Contact Email Address</label>
+                            <input type="text" placeholder="Sarahsmith@gmail.com">
+                            <hr>
+                            <label>Public Contact Phone Number</label>
+                            <input type="text" placeholder="+1 (256) 5844 2547 55">
+                            <hr>
+                            <div class="country">
+                                <p>Choose Your Country of Residence</p>
+                                <div class="form-field">
+                                    <mat-form-field>
+                                        <mat-label>Canada</mat-label>
+                                        <mat-select>
+                                        <mat-option>Canada</mat-option>
+                                        <mat-option>India</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>    
+                            </div>
+                        </form>
+                    </div>                    
+                </div>
+                <div class="col">
+                    <div class="account-right">
+                        <div class="payout">
+                            <div class="pay-head">
+                                <h3>Payout Settings</h3>
+                                <span>Active</span>    
+                            </div>
+                            <div class="pay-email">
+                                <p style="color: #646464; font-size: 12px;">Paypal Email Address</p>
+                                <p style="color: #C2C2C2;font-size: 16px;" >Sarahs12@gmail.com</p>
+                            </div>
+                            <div class="paypal">
+                                <img src="../../../assets/images/paypal-logo.png">
+                                <button>Connect with paypal</button>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button style="background: #1B1B1B;color: #9D9D9D;">Discard Changes</button>
+                            <button style="background: #4FB400; color: #ffffff;">Update Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section #profilesettings *ngIf="profile">
+    <div class="account">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="account-left">
+                        <h3>Public Profile</h3>
+                        <form class="form-body">
+                            <div class="labeling">
+                                <label>Public Display Name</label>                                
+                            </div>
+                            <input type="text" value="Sarah Smith">
+                            <label>Public Profile Bio (optional)</label>
+                            <textarea type="text" placeholder="Comedian Based in Ottawa, Canada."></textarea>
+                            <p style="font-size: 10px; margin-top: 0px;">Characters Remaining 300</p>
+                            <hr>
+                            <div class="social">
+                                <p>Update Your Social Links</p>
+                                <div class="social-links">
+                                    <p>http://www.youtube.com/</p>
+                                    <input type="text">
+                                    <p>http://www.facebook.com/</p>
+                                    <input type="text">
+                                    <p>https://www.instagram.com/</p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </form>
+                    </div>                    
+                </div>
+                <div class="col">
+                    <div class="account-right">
+                        <div class="upload-image">
+                            <div class="profile-image">
+                                <img src="../../../assets/images/testImage.jpg">
+                                <p>Update Public Profile Picture</p>
+                                <div class="circular-upload">
+                                    <span class="material-icons">cloud_upload</span>
+                                </div>
+                                <p style="margin-top: 15px;color: #9A9A9A;font-size: 12px;">Minimum Size Recommended 800x800 px</p>
+                                <p style="color: #565656; font-size:10px">Max upload size 10mb</p>
+                            </div>
+                        </div>
+                        <div class="profile-buttons">
+                            <button style="background: #1B1B1B;color: #9D9D9D;">Discard Changes</button>
+                            <button style="background: #4FB400; color: #ffffff;">Update Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>

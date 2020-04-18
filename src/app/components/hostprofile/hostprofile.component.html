@@ -1,0 +1,129 @@
+<app-header></app-header>
+<div class="landing">    
+    <!-- <div class="landing-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1">
+                    <img src="../../../assets/images/logo.png">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="bar" *ngIf="page!=4">
+        <!-- <span class="bar-rotate">|</span> -->        
+        <span [ngClass]="page==1 ? 'active-step':'null'">1</span>
+        <span class="bar-set"><hr></span>
+        <span [ngClass]="page==2 ? 'active-step':'null'">2</span>
+        <span class="bar-set"><hr></span>
+        <span [ngClass]="page==3 ? 'active-step':'null'">3</span>
+    </div>
+    <div class="paging" *ngIf="page==1">
+        <h2>Let’s Setup Your Public Profile</h2>
+        <div class="form-body">
+            <form>
+                <div class="form-group">
+                    <label for="username">* Public Display Name</label>
+                    <input type="text" formControlName="username" class="form-control" placeholder="John S."/>
+                    <!-- <div class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">Username is required</div>
+                    </div> -->
+                </div>
+                <div class="form-group">
+                    <label for="password">* Public Contact Email Address</label>
+                    <input type="email" formControlName="email" class="form-control" placeholder="john@events.com"/>
+                    <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback"> -->
+                    <!-- <div *ngIf="f.password.errors.required">Password is required</div> -->
+                    <!-- </div> -->
+                </div>
+                <div>
+                    <label for="password">Public Contact Phone Number (optional)</label>
+                    <input type="tel" formControlName="tel" class="form-control" placeholder="+1 (256) 5844 2547 55" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>
+                    <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback"> -->
+                    <!-- <div *ngIf="f.password.errors.required">Password is required</div> -->
+                    <!-- </div> -->
+                </div>
+                <hr>
+                <div class="country">
+                    <p>Choose Your Country of Residence</p>
+                    <div class="form-field">
+                        <mat-form-field>
+                            <mat-label>Canada</mat-label>
+                            <mat-select>
+                            <mat-option>Canada</mat-option>
+                            <mat-option>India</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>    
+                </div>
+                <div>
+                    <button (click)="pageIncrement()">continue</button>
+                </div>            
+            </form>
+        </div>
+    </div>
+    <div class="paging" *ngIf="page==2">        
+        <div class="form-body">
+            <h2 style="font-size: 16px;color: #DBDBDB;  margin-top: 20px;">Upload A Public Profile Picture (optional)</h2>
+            <div>
+                <div class="uploads">
+                    <div class="upload-image">
+                        <span class="material-icons">cloud_upload</span>                    
+                    </div>
+                    <p style="margin-top: 15px;color: #9A9A9A;font-size: 14px;">Minimum Size Recommended 800x800 px</p>
+                    <p style="color: #565656; font-size:12px">Max upload size 10mb</p>
+                </div>
+                <hr>
+                <form class="profile-description">
+                    <textarea placeholder="Comedian Based in Ottawa, Canada."></textarea>
+                  </form>
+                <p style="color: #A2A2A2; font-size: 11px; text-align: left;margin-top: 5px;">Characters Remaining 300</p>
+                <div>
+                    <button style="width:100px; background: #181818; border:#181818 ;" (click)="PageDecrement()">Go Back</button>
+                    <button style="width: 300px;" (click)="pageIncrement()">continue</button>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="paging" *ngIf="page==3">
+        <div class="form-body" style="width: 480px;">
+            <h2 style="color: #ffffff;  margin-top: 10px; padding-bottom: 5px;">Configure Your Payout Account</h2>
+            <p style="font-size: 12px;">Currently you can collect your earnings through Paypal. Don’t have a Paypal account? Create one by clicking here.</p>
+            <div class="paypal">
+                <button>Connect With Paypal</button>
+            </div>
+                <div class="final-button">
+                    <button style="width:100px; background: #181818; border:#181818 ;" (click)="PageDecrement()">Go Back</button>
+                    <button style="width: 300px;" (click)="pageIncrement()">Finish setup</button>
+            </div>
+            <p style="color: #848484; font-size: 12px">Note: You can edit your Paypal payout email address in your account settings.</p>
+        </div>
+    </div>
+    <div class="paging" *ngIf="page==4 && showPopUp">
+        <div class="form-body" style="width: 506px;height: 570px;">
+            <h2 style="color: #ffffff;  margin-top: 10px; padding-bottom: 5px;">Congratulations!</h2>
+            <p style="font-size: 16px; color: #A4A4A4;
+            ">You’re All Setup.</p>
+            <hr style="margin-top: 24px;">
+            <p style="font-size: 16px; color: #CACACA; text-transform: capitalize; margin-bottom: 35px;">let’s link your social media accounts (optional)</p>
+            <div class="social-link">
+                <div class="links">
+                    <span>http://www.youtube.com/</span>
+                    <input type="text" placeholder="Sairyo">    
+                </div>
+                <div class="links">
+                    <span>http://www.youtube.com/</span>
+                    <input type="text" placeholder="Sairyo">    
+                </div>
+                <div class="links">
+                    <span>http://www.youtube.com/</span>
+                    <input type="text" placeholder="Sairyo">    
+                </div>
+            </div>
+                <div class="skip">
+                    <button [routerLink]="['/hostDashboard-overview']" routerLinkActive="router-link-active">Save Changes</button>
+                    <button class="skip-button" [routerLink]="['/hostDashboard-overview']" routerLinkActive="router-link-active">Skip</button>
+                </div>            
+        </div>
+    </div>    
+</div>
+<app-main-footer></app-main-footer>

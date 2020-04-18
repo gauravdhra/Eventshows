@@ -1,0 +1,231 @@
+footer{
+    width: 100%;
+  min-height: 440px;
+  background:#1a1a1a;
+  padding-top: 5%;
+}
+.footerbox {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #0D0D0D;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px  #0D0D0D;
+}
+img.footerlogo {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 0px;
+    top: 30px;
+}
+.footermenu{
+    position: relative;
+    width: 100%;
+    top: -20px;
+}
+.menuone{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+.menutwo{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    position: absolute;
+    height: 124px;
+    left: 30%;
+    top: 40px;
+}
+
+.menuthree{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    position: absolute;
+    height: 124px;
+    left: 52%;
+    top: 40px;
+}
+.menutitle{
+    position: static;
+    height: 28px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 28px/2);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.18px;    
+    color: #E0E0E0;  
+    flex: none;
+    order: 0;
+    align-self: center;
+    margin: 10px 0px;
+}
+.menutitlelink{
+    position: static;
+height: 28px;
+left: 0%;
+right: 0%;
+top: calc(50% - 28px/2);
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.18px;
+color: #4F4F4F;
+flex: none;
+order: 0;
+align-self: center;
+margin: 10px 0px;
+}
+.followmenus{
+position: absolute;
+width: 120px;
+height: 53px;
+/* right: 390px; */
+top: 25px;
+}
+.followstitle{
+    position: absolute;
+    height: 21px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 0.01px;
+    color: #989898;
+    top: -15px;
+}
+.followsicon{
+position: absolute;
+width: 120px;
+height: 24px;
+right: 0px;
+top: calc(50% - 24px/2 + 14.5px);
+}
+
+img.icon{
+    width: 30px;
+    height: 30px;
+}
+.fb{
+    position: absolute;
+    right: 20%;
+    top: 35%;
+    bottom: 16.67%;
+}
+.youtube{
+    position: absolute;
+    left: 12%;
+    top: 35%;
+    bottom: 29.95%;
+}
+.instagram{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    bottom: 22.95%;
+}
+.scureicon{
+position: absolute;
+width: 116.29px;
+height: 32px;
+top: 45px;
+/* right:450px ; */
+}
+.securetitel{
+    position: absolute;
+    width: 99px;
+    height: 21px;
+    left: 0;
+    top: -35px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 0.01px;
+    color: #989898;
+}
+.copyright{
+position: absolute;
+width: 200px;
+height: 21px;
+right: 165px;
+top: 227px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 21px;
+/* identical to box height, or 175% */
+
+text-align: right;
+letter-spacing: 0.01px;
+
+color: #989898;
+}
+@media screen and (min-width:7650px) and (max-width: 1700px){
+    img.footerlogo {
+     
+        top: 0px;
+        left: 0px; 
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width:300px) and (max-width: 768px){
+
+    footer{
+        min-height: 700px;
+        max-height: 700px;
+    }
+    img.footerlogo {
+     
+        top: 0px;
+    }
+
+    img.footerlogo {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        left: 200px; 
+        top: 50px;
+    }
+    .copyright{
+        top: 115px;
+    }
+
+}
+
+@media screen and (min-width:300px) and (max-width: 700px){
+    img.footerlogo {
+     
+        top: 45px;
+    }
+    footer{
+       min-height:650px;
+    }
+
+    .scureicon{
+   
+        top: 110px;
+      
+        }
+}

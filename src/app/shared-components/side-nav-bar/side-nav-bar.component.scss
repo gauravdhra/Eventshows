@@ -1,0 +1,79 @@
+.side-nav{
+    position: absolute;
+    display: inline-grid;
+    width: 50px;
+    height: 100%;
+    background: #1A1A1A;
+
+    .top-nav{
+        img{
+            height: 50px;
+            width: 50px;
+        }    
+    }
+
+    .nav-icons{
+        text-align: center;
+        margin-top: 100px;
+        width: 50px;
+
+        .add{            
+            height: 35px;
+            width: 35px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            padding: 4px;
+            border: solid 1px #4FB400;
+            border-radius: 10px;
+            background: #4FB400;
+            color: white;
+            margin-bottom: 10px;        
+        }
+        .event{
+            height: 35px;
+            width: 35px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            padding: 4px;
+            border: solid 1px #262626;
+            margin-bottom: 10px;
+            background: #262626;
+            border-radius: 10px;        
+        }
+        .request-money{
+            height: 35px;
+            width: 35px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            padding: 4px;
+            border: solid 1px #262626;
+            margin-bottom: 10px;
+            background: #262626;
+            border-radius: 10px;
+        }
+    }
+
+    .bottom-nav{
+        text-align: center;
+        margin-top: 60px;
+        width: 50px;
+        img{
+            height: 50px;
+            width: 50px;            
+            border-radius: 50px;
+        }
+        .settings{
+            height: 35px;
+            width: 35px;
+            text-align: center;
+            padding: 4px;
+            border: solid 1px #262626;
+            margin-top: 10px;
+            background: #262626;
+            border-radius: 10px;        
+        }
+    }
+}

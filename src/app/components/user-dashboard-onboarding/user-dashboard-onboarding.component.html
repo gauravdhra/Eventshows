@@ -1,0 +1,10 @@
+<div class="landing">
+  <app-header></app-header>
+  
+<div class="form-body" *ngIf="showPopUp">
+    <h2>Create Your First Online Event !</h2>
+    <p>Setup your host profile and start creating free and paid online events</p>
+    <button [routerLink]="['/hostprofile-login']" routerLinkActive="router-link-active">Setup host profile</button><br>    
+    <button class="skip-button" (click)="closePopUp()">Skip</button>    
+</div>
+</div>

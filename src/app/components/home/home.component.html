@@ -1,0 +1,133 @@
+<div class="landing">
+    <app-header></app-header>
+        <div class="main-page">
+        <div class="container-fluid">
+        <div class="row first-half">
+            <div class="col-md-3">                
+                <img src="../../../assets/images/home1.png">
+            </div>
+            <div class="col-md-3">                
+                <img src="../../../assets/images/home2.png">
+            </div>
+                <!-- <div class="bottom-button">
+                <button [routerLink]="['/signup']" routerLinkActive="router-link-active">Sign Up</button>
+                <span class="bar">|</span>
+                <button>Forever Free</button>
+                </div> -->
+            <div class="col-md-5">
+                <span class="stayhome" style="color: #A7A7A7; font-weight: 700;">#Stay</span>
+                <span class="stayhome" style="color: #C8C8C8; font-weight: 300;">Home</span>
+                <h1>Connect with your fans</h1>
+                <p>Artists can create online events for free and get paid directly inside our platform.
+                    Forever free for the artist.</p>
+                <button [routerLink]="['/hostprofile-login']" routerLinkActive="router-link-active">create a free account</button>
+            </div>                
+        </div>
+        </div>
+        </div>
+        <div class="second-main-page">
+            <div class="container-fluid">
+                <div class="row second-half">
+                    <div class="col-md-5">
+                        <div class="stayconnected">
+                            <span class="stayhome" style="color: #A7A7A7; font-weight: 700;">#Stay</span>
+                            <span class="stayhome" style="color: #C8C8C8; font-weight: 300;">Connected</span>
+                            <h1>Join artists monetizing their events.</h1>
+                            <button [routerLink]="['/hostprofile-login']" routerLinkActive="router-link-active">Become A Host</button>
+                        </div>                        
+                    </div>
+                    <div class="col-md-7">
+                        <div class="outer-div">
+                            <div class="inner-div">
+                                <div class="side-nav">
+                                    <div class="top-nav">
+                                        <img src="../../../assets/images/Sairyo_logo/High-Resolution PNG/final5.png">
+                                    </div>
+                                    <div class="nav-icons">
+                                        <span class="material-icons add">add</span>
+                                        <span class="material-icons event">event_note</span>
+                                        <span class="material-icons request-money">event_note</span>
+                                    </div>
+                                    <div class="bottom-nav">
+                                        <img src="../../../assets/images/testImage.jpg">            
+                                        <span class="material-icons settings">settings</span>
+                                    </div>
+                                </div>
+                                <div class="performance">
+                                    <h3>Performance</h3>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="this-month">
+                                                <div class="mon">
+                                                    <p>This Month</p>
+                                                </div>                                                
+                                                <div class="pay-info">
+                                                    <h2>$ 256</h2>
+                                                    <p>View Payouts &#8594;</p>
+                                                </div>                    
+                                            </div>
+                                            <div class="col-md-10 all-earning">
+                                                <p>All Time Earnings</p>
+                                                <app-bar-chart></app-bar-chart>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="myevents">
+                                    <h3>My Events</h3>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="images">
+                                                <img src="../../../assets/images/testImage.jpg">
+                                            </div>
+                                            <div class="images">
+                                                <img src="../../../assets/images/testImage.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="third-main-page">
+                <a style="color: transparent;" href="https://www.youtube.com/watch?v=6qI1UHM2DIY" target="_blank">
+                    <div class="third-half">
+                        <div class="circular-play">
+                            <span class="fa fa-play play-icon"></span>
+                        </div>
+                    </div>
+                </a>                
+                </div>                    
+            <div class="fourth-main-page">
+                <div class="integrate">
+                    <h2>Powerful integrations</h2>
+                    <p>Artists can live stream using their social platform of choice or any website.</p>
+                </div>
+                <div class="logo">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img src="../../../assets/logos/Instagram.png">
+                            </div>
+                            <div class="col">
+                                <img src="../../../assets/images/social logos/facebook_co.jpg">
+                            </div>
+                            <div class="col">
+                                <img src="../../../assets/images/social logos/zoom_co.jpg">
+                            </div>
+                            <div class="col">
+                                <img src="../../../assets/images/social logos/twitch_co.png">
+                            </div>
+                            <div class="col">
+                                <img src="../../../assets/images/social logos/youtube_co.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <p><a [routerLink]="['/faq']" routerLinkActive="router-link-active">Explore Features &#10142;</a></p>
+                </div>
+            </div>    
+</div>
+<app-main-footer></app-main-footer>

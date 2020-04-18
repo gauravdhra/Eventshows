@@ -1,0 +1,180 @@
+<!-- <mat-grid-list cols="12"rowHeight="100%"  >
+    
+    <mat-grid-tile  colspan="8"rowspan="2" style.background="blue"> -->
+        <div class="landing">
+            <app-header></app-header>
+        <div class="container">
+            <mat-horizontal-stepper class="stepper-section" [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                    <h3 class="heading">Let's Create Your Online Event!</h3>
+                    <div class="row">
+                        <div class="col-md-5">
+        
+        
+                            <form [formGroup]="firstFormGroup">
+                                <ng-template matStepLabel>Create Event</ng-template>
+                                <p>
+                                    <mat-form-field class="example-full-width" appearance="legacy">
+                                        <mat-label>Event title</mat-label>
+                                        <input matInput formControlName="title" required placeholder="Live comedy show">
+                                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                    </mat-form-field>
+                                </p>
+                                <p>
+                                    <mat-form-field appearance="outline" class="example-full-width">
+                                        <mat-label>Event Description</mat-label>
+                                        <textarea matInput formControlName="description" required rows="3" cols="100"
+                                            placeholder="Live comedy show featuring Dj Nakhel and Tony van on exclusive private youtube live  event!"></textarea>
+                                    </mat-form-field>
+                                </p>
+                                <div class="">
+                                    <label id="example-radio-group-label">Is You Event Public Or Private?</label>
+                                    <mat-radio-group formControlName="privacy" aria-labelledby="example-radio-group-label"
+                                        class="radioprivacy" [(ngModel)]="isPublic">
+                                        <mat-radio-button class="example-radio-button" [value]="true">
+                                            Public
+                                        </mat-radio-button>
+                                        <mat-radio-button class="example-radio-button" [value]="false">
+                                            Private
+                                        </mat-radio-button>
+                                    </mat-radio-group>
+        
+                                </div>
+        
+                                <p-fileUpload required name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
+                                    multiple="multiple" accept="image/*" maxFileSize="1000000">
+                                    <ng-template pTemplate="content">
+                                        <ul *ngIf="uploadedFiles.length">
+                                            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes
+                                            </li>
+                                        </ul>
+                                    </ng-template>
+                                </p-fileUpload>
+        
+        
+                            </form>
+        
+                        </div>
+                        <div class="col-md-5 calendar">
+        
+        
+                            <div class="calendarEvent">
+                                <!-- <div class="ui-g-6 ui-md-4"> -->
+        
+                                <p-calendar [inline]="true" placeholder="Select date and time" [(ngModel)]="eventSchedule"
+                                    showTime="true">
+                                    <p-header>
+                                        <mat-label>Select Event Date </mat-label>
+                                    </p-header>
+                                </p-calendar>
+        
+                                <!-- </div> -->
+                            </div>
+        
+        
+                        </div>
+                    </div>
+        
+        
+        
+                    <div class="step-one-button">
+                        <button mat-raised-button matStepperNext>Continue</button>
+                    </div>
+                </mat-step>
+        
+        
+        
+                <mat-step [stepControl]="secondFormGroup">
+                    <h3 class="heading">Choose The Platform You're Streaming from</h3>
+        
+                    <form [formGroup]="secondFormGroup" class="second-step">
+                        <ng-template matStepLabel>Platform</ng-template>
+                        <!-- <mat-form-field>
+                            <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                        </mat-form-field> -->
+                        <!-- <div class="socialBox"> -->
+                        <div class="row social">
+                            <div class="column socialBox">
+                                <img class=" "src="../../../assets/logos/facebook.png" alt="facebook" >
+                            </div>
+        
+                            <div class="column socialBox">
+                                <img class=" "src="../../../assets/logos/Instagram.png " alt="instagram">
+                            </div>
+        
+                            <div class="column socialBox">
+                                <img class=" "src="../../../assets/logos/youtube.png " alt="youtube">
+                            </div>
+        
+                            <div class="column socialBox">
+                                <img class=" "src="../../../assets/logos/twitch.png " alt="twitch">
+                            </div>
+        
+                            <div class="column socialBox">
+                            <img class=" "src="../../../assets/logos/zoom.png " alt="zoom">
+                            </div>
+                        </div>
+                        <div class="second-step-content">
+                            <p>Enter your streaming URL</p>
+                            <input type="text" placeholder="www.youtube.com/channel/Sairyo/2rnuf-3f2f">    
+                        </div>
+                        <!-- <span class="socialBox">
+                            <button class="fb"></button>
+                            <button class="ig"></button>
+                            <button class="yt"></button>
+                            <button class="tw"></button>
+                            <button class="zm"></button>
+        
+                        </span> -->
+                        <!-- </div> -->
+        
+                        <div class="platformButton">
+                            <!-- <button mat-raised-button color="primary" matStepperPrevious>Back</button> -->
+                            <button mat-raised-button matStepperNext>Continue</button>
+                        </div>
+                    </form>
+                </mat-step>
+        
+        
+        
+                <mat-step>
+                    <h3 class="heading">Organizing The Event With Multiple Hosts?</h3>
+                    <form [formGroup]="thirdFormGroup" class="third-step">
+                        <ng-template matStepLabel>Co-Hosts</ng-template>
+                        <p>Start inviting your co-hosts</p>
+                        <div *ngFor="let host of hosts.controls; let i = index">
+                            <div formArrayName="hosts" class="hosts">
+                                <mat-form-field class="example-form-field">
+                                    <mat-label>Co-Host</mat-label>
+        
+                                    <input [formControlName]="i" matInput type="text" placeholder="Jonathan34@gmail.com" style="outline: none;">
+                                    <button color="warn" mat-button matSuffix mat-icon-button (click)="removeHost(i)">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+        
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="button-icon">
+                            <div class="addicon">
+                                <button (click)="addHost()" mat-mini-fab aria-label="Example button icon">
+                                    <mat-icon>add</mat-icon>
+                                </button>
+                                <p>Add New Co-Host</p>
+                            </div>
+                            <div class="step-three-button">
+                                <button style="width: 300px; height: 35px;" mat-raised-button color="primary" (click)="createEvent()">Continue</button>
+                                <div>
+                                    <button mat-stroked-button (click)="createEvent()">Skip</button>
+                                </div>                                
+                            </div>
+                        </div>                        
+                    </form>
+                </mat-step>
+            </mat-horizontal-stepper>
+        </div>
+    </div>
+    <app-main-footer></app-main-footer>
+        <!-- 
+        </mat-grid-tile>
+        </mat-grid-list> -->

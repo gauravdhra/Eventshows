@@ -1,0 +1,35 @@
+.footer{
+    margin-top: 0px;
+    background: #000000;
+    border: 1px solid #1A1A1A;
+    position: relative;
+    .container{
+        display: flex;
+        align-items: center;
+        p{
+            margin-bottom: 0px;
+            margin-right: 20px;
+        }    
+    }
+}
+
+.footer-left{
+    display: flex;
+    margin-left: 15px;
+    p{
+        a:hover{
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+.footer-right{
+    display: flex;
+    position: absolute;
+    right: 30px;    
+}
+
+.main-footer{
+    display: flex;
+}

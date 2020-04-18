@@ -1,0 +1,416 @@
+.landing{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: relative;    
+}
+
+.host-nav{    
+    background: #131313;
+    height: 50px;
+    .host-bar{
+        display: flex;
+        position: absolute;
+        left: 100px;
+
+        p{
+            margin-right: 20px;
+            color: #787878;
+            cursor: pointer;
+        }
+        span{
+            margin-right: 20px;
+            color: #787878;
+            font-size: 28px;
+            font-weight: lighter;
+        }
+        .active-step:active{
+            color: #FFFFFF;
+        }
+    }
+}
+
+.performance{    
+    position: relative;
+    top: 12px;
+    left: 105px;
+    width: calc(100% - 105px);
+
+    .container{
+        margin-left: 0px;            
+    }
+}
+
+p{
+    color: #C1C1C1;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+h2{
+    color: #FFFFFF;
+}
+
+.myevents{    
+    position: relative;
+    top: 40px;
+    left: 106px;
+    width: calc(100% - 106px);
+
+    .container{
+        margin-left: 0px;            
+    }
+
+    .images{
+        display: flex;
+        width: 33%;
+    }
+    img{
+        height: 200px;
+        width: 200px;
+        border-radius: 8px;
+    }    
+}
+
+h3{
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.this-month{
+    border: 1px solid #1A1A1A;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 8px;
+    background: #1A1A1A;
+    .pay-info
+    {
+        position: relative;
+        top:60px;
+        left: 60px;
+        p{
+            margin-top: 0px;
+            font-size: 10px;
+        }    
+    }
+}
+
+.all-earning{
+    border: 1px solid #1A1A1A;
+    height: 200px;
+    background: #1A1A1A;
+    border-radius: 8px;
+}
+
+.side-nav{
+    position: absolute;
+    display: inline-grid;
+    width: 50px;
+    height: 100%;
+    background: #1A1A1A;
+
+    .top-nav{
+        img{
+            height: 50px;
+            width: 50px;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+    }
+
+    .nav-icons{
+        text-align: center;
+        align-self: center;
+        width: 50px;
+
+        .add{            
+            height: 35px;
+            width: 35px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            padding: 4px;
+            border: solid 1px #4FB400;
+            border-radius: 10px;
+            background: #4FB400;
+            color: white;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .event{
+            height: 35px;
+            width: 35px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            padding: 4px;
+            border: solid 1px #262626;
+            margin-bottom: 10px;
+            background: #262626;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .request-money{
+            height: 35px;
+            width: 35px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            padding: 4px;
+            border: solid 1px #262626;
+            margin-bottom: 10px;
+            background: #262626;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .bottom-nav{
+        text-align: center;
+        align-self: flex-end;        
+        width: 50px;
+        padding-bottom: 10px;
+        img{
+            height: 50px;
+            width: 50px;            
+            border-radius: 50px;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+        .settings{
+            height: 35px;
+            width: 35px;
+            text-align: center;
+            padding: 4px;
+            border: solid 1px #262626;
+            margin-top: 10px;
+            background: #262626;
+            border-radius: 10px;        
+        }
+        .settings:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.account-right{
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+.upload-image {
+    background: #0D0D0D;
+    box-shadow: 0px -3px 20px #213214, 0px 10px 20px #000000;
+    border-radius: 70px;
+    width: 300px;
+    height: 330px;
+    text-align: center;
+    display: flex;    
+    justify-content: center;
+
+    img{
+        height: 80px;
+        width: 80px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .profile-image{
+        p{
+            color: #DBDBDB;
+            margin-top: 8px;
+            font-size: 13px;
+        }
+    }
+    .circular-upload{
+        border: 0.5px solid;
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        margin-left: 68px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.profile-buttons{
+    position: relative;
+    top: 95px;
+    left: 60px;
+    button{
+        margin-right: 15px;
+        width: 140px;        
+    }
+
+}
+
+.payout{
+    background: #0D0D0D;
+    box-shadow: 0px -3px 20px #213214, 0px 10px 20px #000000;
+    border-radius: 70px;
+    width: 350px;
+    height: 250px;
+
+    h3{        
+        margin-right: 10px;
+    }
+
+    .pay-head{
+        display: flex;
+        position: relative;
+        top: 20px;
+        left: 40px;
+        span{
+            font-size: 12px;
+            color: #7DC743;
+            align-items: flex-end;
+            display: flex;
+            height: 25px;
+        }    
+    }
+
+    .pay-email{
+        position: relative;
+        top: 25px;
+        left: 40px;
+    }
+
+    .paypal{
+        position: relative;
+        top: 50px;
+        left: 40px;
+        img{
+            height: 30px;
+            width: 50px;
+        }
+        button{
+            width: 160px;
+            background: #E3E3E3;
+            border-radius: 70px;
+            color: #2B2B2B;
+            font-size: 12px;
+            margin-left: 50px;
+        }
+    }
+}
+
+.buttons{
+    position: relative;
+    top: 150px;
+    left: 60px;
+    button{
+        margin-right: 15px;
+        width: 140px;        
+    }
+}
+
+.account-left{
+    position: absolute;
+    top: 12px;
+    left: 100px;
+}
+
+.form-body{            
+    .labeling{
+        label{
+            margin-right: 80px;
+        }
+        span{
+            font-size: 10px;
+            color: #474747;
+        }
+    }
+
+    label{
+        color: #A2A2A2;
+        font-size: 14px;
+    }
+    input{
+        width: 328px;
+        background: #141414;
+        color: #8F8F8F;
+        border: 1px solid #1F1F1F;
+        font-size: 14px;
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    textarea{        
+            width: 328px;
+            background: #141414;
+            color: #8F8F8F;
+            border: 1px solid #1F1F1F;
+            font-size: 14px;
+            height: 85px;
+            padding: 10px;            
+    }
+    button{
+        background: #213A0C;
+        width: 328px;        
+        color: #BCBCBC;
+        margin-bottom: 20px;
+    }
+    hr{
+        margin-top: 0px;
+        margin-bottom: 5px;
+        border: 0;
+        border: 0.5px solid #333333;
+        float: left;
+        width: 328px;
+    }
+    .public-contact{
+        display: block;
+    }
+    .country{
+        margin-bottom: 25px;
+        p{
+            color: #818181;
+            text-align: left;
+            font-size: 12px;
+        }    
+    }
+
+    .mat-form-field {
+        display: inline-block;
+        position: relative;
+        text-align: left;
+        width: 328px;
+        padding: 10px;
+        background: #1A1A1A;
+        border: 1px solid #252525;
+        // box-sizing: border-box;
+        border-radius: 2px;
+    }
+
+}
+
+.social{
+    p{
+        display: inline-block;
+        color: #C2C2C2;        
+    }
+    .social-links{
+        
+        p{
+            font-size: 12px;            
+            color: #4B4B4B;
+            width: 180px;
+        }
+        input{
+            width: 153px;
+            height: 30px;
+        }
+    }
+}
+
+button{
+    text-transform: capitalize;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 2px;
+}
