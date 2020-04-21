@@ -97,5 +97,7 @@ export class SuccessDialog {
   onNoClick(): void {
     this.dialogRef.close();
   }
+  copyLink(){
 
+  }
 }

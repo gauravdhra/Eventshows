@@ -1,34 +1,33 @@
-<div style="background-color:#41b53f;color:white;text-align:center;">
-    <h1 style="padding-top:30px" >Congrats On Creating Your First Event!</h1>
+<div class="congo-dialog"style="background-color:#41b53f;color:white;text-align:center;">
+    <h1 class="title-head" style="padding-top:30px" >Congrats On Creating Your First Event!</h1>
     <div mat-dialog-content>
-        <h4>Start sharing with yout audience</h4>
+        <h4 class="heading">Start sharing with yout audience</h4>
         <!-- <mat-form-field> -->
-            <button  mat-mini-fab aria-label="Example button icon">
+            <button class="fb-button" mat-mini-fab aria-label="Example button icon">
                 <img src="../../../assets/logos/icon-facebook.png">
             </button>
-            <button  mat-mini-fab aria-label="Example button icon">
+            <button class="gplus-button" mat-mini-fab aria-label="Example button icon">
                 <img src="../../../assets/logos/icons8-google-plus-48 1.png">
             </button>
-            <button  mat-mini-fab aria-label="Example button icon">
+            <button class="tw-button" mat-mini-fab aria-label="Example button icon">
                 <img src="../../../assets/logos/icons8-twitter-48 1.png">
             </button>
-            <h3>Share Using Your Link</h3>
+            <h3 class="share-link">Share Using Your Link</h3>
             <mat-form-field class="example-form-field">
-
                 <!-- <input width="300"disabled [formControlName]="i" matInput type="text" placeholder="www.sairyoevents.com/events/g3h5cc"> -->
-                <input width="300"disabled matInput type="text" placeholder="www.sairyoevents.com/events/g3h5cc">
+                <input disabled matInput type="text" placeholder="www.sairyoevents.com/events/g3h5cc">
                 <button color="warn" mat-button matSuffix mat-icon-button>
-                    <!-- <mat-icon  (click)="copyLink()">assignment</mat-icon> -->                    
+                    <mat-icon  (click)="copyLink()">assignment</mat-icon>                    
                 </button>
 
             </mat-form-field>
 
             <!-- <input matInput [(ngModel)]="data.animal"> -->
         <!-- </mat-form-field> -->
-    </div>
-    <div mat-dialog-actions style="justify-content: center;">
-        <!-- <button mat-raised-button color="primary" [mat-dialog-close]="data.animal" (click)="onNoClick()" cdkFocusInitial>Continue</button> -->
-        <button mat-raised-button color="primary">Continue</button>
+        <div mat-dialog-actions style="justify-content: center;">
+            <!-- <button mat-raised-button color="primary" [mat-dialog-close]="data.animal" (click)="onNoClick()" cdkFocusInitial>Continue</button> -->
+            <button mat-raised-button color="primary">Continue</button>
+        </div>
     </div>
 
     

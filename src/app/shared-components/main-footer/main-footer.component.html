@@ -1,50 +1,50 @@
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="../../../assets/images/Sairyo_logo/High-Resolution PNG/Final.png">
-            </div>
-            <div class="col">
-                <p>Company</p>
-                <div class="footer-links">
-                    <a [routerLink]="['/addevents']" routerLinkActive="router-link-active">Create an event</a>
-                    <a [routerLink]="['/aboutus']" routerLinkActive="router-link-active">About Us</a>
-                    <a [routerLink]="['/aboutnewsroom']" routerLinkActive="router-link-active">Newsroom</a>    
-                </div>
-            </div>
-            <div class="col">
-                <p>Support</p>
-                <div class="footer-links">
-                    <a>Artist</a>
-                    <a [routerLink]="['/faq']" routerLinkActive="router-link-active">FAQ</a>
-                    <a [routerLink]="['/contactus']" routerLinkActive="router-link-active">Contact</a>
-                </div>
-            </div>
-            <div class="col">
-                <p>Legal</p>
-                <div class="footer-links">
-                    <a [routerLink]="['/terms']" routerLinkActive="router-link-active">Terms & Conditions</a>
-                    <a [routerLink]="['/privacy-policy']" routerLinkActive="router-link-active">Privacy Policy</a>
-                    <a [routerLink]="['/donation-policy']" routerLinkActive="router-link-active">Donation Policy</a>
-                </div>
-            </div>
-            <div class="col social">
-                <p>Follow us</p>
-                <div class="social-links">
-                    <a class="fab fa-facebook-f"></a>
-                    <a class="fab fa-youtube-play"></a>
-                    <a class="fab fa-instagram"></a>
-                </div>
-            </div>
-            <div class="col stripe-pay">
-                <p>Secure Payments</p>
-                <button>powered by <b style="font-size: 16px;">stripe</b></button>
-            </div>
+<div class="container-fluid footer-setup">
+    <div class="row ">
+
+        <div class="footer-section col-md-2 col-sm-2 col-3 col-lg-2" style="text-align: center;">
+            <img class="" src="../../assets/logos/Frame.png" alt="">
         </div>
-        <div class="row copy-right">
-            <div class="col">
-                <p>© 2020 Sairyō | All rights reserved.</p>
-            </div>            
+        <div class="footer-section col-md-2 col-sm-2 col-3 col-lg-2">
+            <h6>Company</h6>
+            <nav>
+                <a routerLink="/dashboard">Create an event</a>
+                <a routerLink="/about">About us</a>
+                <a routerLink="/newsroom">News room</a>
+            </nav>
+        </div>
+        <div class="footer-section col-md-2 col-sm-2 col-3 col-lg-2">
+            <h6>Support</h6>
+            <a routerLink="/artist">Artist</a>
+            <a routerLink="/faq">FAQ</a>
+            <a routerLink="/contact">Contact</a>
+        </div>
+        <div class="footer-section col-md-2 col-sm-2 col-3 col-lg-2">
+            <h6>Leagal</h6>
+            <a routerLink="/terms">Terms & Conditions</a>
+            <a routerLink="/privacy-policy">Privacy policy</a>
+            <a routerLink="/donation-policy">Donation policy</a>
+        </div>
+        <div class="footer-section col-md-2 col-sm-2 col-3 col-lg-2 ">
+            <h6>Follow Us</h6>
+            <div class="social-links">
+                <a href="www.facebook.com">
+                    <img class="" src="../../assets/social_images/Facebook.svg" alt="">
+                </a>
+                <a href="www.facebook.com">
+                    <img class="" src="../../assets/social_images/Youtube.svg" alt="">
+                </a>
+                <a href="www.facebook.com">
+                    <img class="" src="../../assets/social_images/Instagram.svg" alt="">
+                </a>
+            </div>
+
+        </div>
+        <div class="footer-section col-md-2 col-sm-2 col-3 col-lg-2">
+            <h6>Secure Payments</h6>
+            <div class=" gfg stripe-pay">
+                <!-- <img class="" src="../../assets/logos/Group103.png" alt=""> -->
+                <button>powered by <b >stripe</b></button>
+            </div>
         </div>
     </div>
-</footer>
+</div>

@@ -26,6 +26,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FileUploadModule } from 'primeng/fileupload';
 import { CalendarModule } from 'primeng/calendar';
 import {A11yModule} from '@angular/cdk/a11y';
+import {  MatMenuModule } from '@angular/material/menu';
+import {  MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -111,6 +115,9 @@ export function provideConfig() {
     MainSearchComponent,
   ],
   imports: [
+    MatSidenavModule,
+    MatCardModule,
+    MatMenuModule,
     BrowserModule,    
     AppRoutingModule,
     SocialLoginModule,

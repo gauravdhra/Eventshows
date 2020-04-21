@@ -1,6 +1,6 @@
 .landing {
   height: fit-content;
-  background: black;
+  background: #151414;
 }
 
 .step-one-button {
@@ -24,18 +24,18 @@
   }
 }
 
-.mat-raised-button:not([class*="mat-elevation-z"]) {
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0),
-    0px 2px 2px 0px rgba(0, 0, 0, 0), 0px 1px 5px 0px rgba(0, 0, 0, 0);
+// .mat-raised-button:not([class*="mat-elevation-z"]) {
+//   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0),
+//     0px 2px 2px 0px rgba(0, 0, 0, 0), 0px 1px 5px 0px rgba(0, 0, 0, 0);
 
-  background-color: #4fb400;
-  color: white;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-}
+//   background-color: #4fb400;
+//   color: white;
+//   font-family: Inter;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 17px;
+// }
 
 .calendar {
   position: relative;
@@ -70,11 +70,15 @@
   margin-bottom: 30px;
   text-align: center;
   font-family: Poppins;
-  font-size: 34px;
+  font-size: 3.5vw!important;
   letter-spacing: 0.2px;
   color: #ffffff;
 }
+.green-button {
+  text-align: center;
+      margin-top: 40px;
 
+}
 .social {
   margin-bottom: 60px;
   .column {
@@ -88,7 +92,7 @@
     justify-content: center;
     align-items: center;
     height: 170px;
-    border: 1px solid;
+    border: 1px solid #312f2f;
     border-radius: 40px;
   }
 }
@@ -295,12 +299,42 @@
   border-radius: 40px;
 }
 
+.column.socialBox:hover {
+  background-color: #132800c2;
+  border: 1px solid #439728;
+}
+
+.column.socialBox img {
+  width: 65%;
+}
+
+@media only screen and(max-width:985px) {
+  .column.socialBox {
+    height: 81px !important;
+    border-radius: 20px !important;
+  }
+}
+@media only screen and(max-width:485px) {
+  .column.socialBox img {
+    width: 95% !important;
+  }
+}
+@media only screen and(max-width:414px) {
+.second-step-content input{
+      width: 100%!important;
+  }
+}
+div:focus {
+  background-color: #132800c2;
+  border: 1px solid #439728;
+}
 .platformButton {
   text-align: center;
   button {
     margin: 10px;
     height: 40px;
-    width: 300px;
+    width: 20%;
+    padding: 0;
   }
 }
 
@@ -308,14 +342,26 @@ button {
   margin: 3px;
 }
 .calendarEvent {
-  margin: 3px;
+  margin: 11px 0px;
 }
 
 .stepper-section {
-  background-color: black;
+  background-color: #151414;
 }
 
 // bckground black kr k dekhna ab OK
+
+/* Clearfix (clear floats) */
+// .row::after {
+//   content: "";
+//   clear: both;
+//   display: table;
+// }
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 
 /* Clearfix (clear floats) */
 .row::after {
@@ -323,7 +369,9 @@ button {
   clear: both;
   display: table;
 }
-
+.row button {
+  margin-top: 10px;
+}
 // .container{
 //     background-color: yellow;
 //         padding-left: 0px;
@@ -395,9 +443,8 @@ button {
     color: white;
   }
   .mat-step-header .mat-step-icon-selected,
-  .mat-step-header .mat-step-icon-state-done,
-  .mat-step-header .mat-step-icon-state-edit {
-    background-color: #41b53f;
+  .mat-step-header .mat-step-icon-state-done {
+    background-color: #41b53f!important;
   }
   .mat-step-header .mat-step-icon {
     background-color: rgba(245, 245, 245, 0.54);
@@ -409,7 +456,6 @@ button {
     border-top-color: rgb(247, 253, 251);
   }
   .mat-step-header .mat-step-label.mat-step-label-active {
-    color: #41b53f;
     font-weight: 500;
   }
   body .ui-button {
@@ -431,7 +477,7 @@ button {
     background-color: transparent;
     padding: 0 0;
     border: none;
-    color: #333333;
+    color: #908f8f;
   }
 
   body .ui-button.ui-button-text-only .ui-button-text {
@@ -453,7 +499,7 @@ button {
   body .ui-datepicker {
     padding: 0.857em;
     min-width: 20em;
-    background-color: #000000;
+    background-color: #151414;
     color: #f3e9e9;
     border: 1px solid #41b53f;
   }
@@ -475,7 +521,7 @@ button {
   }
   body .ui-datepicker .ui-datepicker-header {
     padding: 0.429em 0.857em 0.429em 0.857em;
-    background-color: #0f5a0e;
+    background-color: #232323;
     color: white;
     border-radius: 0;
   }
@@ -517,21 +563,24 @@ button {
     top: 0px !important;
   }
   .navbar-light .navbar-toggler {
-    background-color: #41b53f;
     color: rgba(19, 236, 26, 0.98);
-    border-color: rgba(71, 230, 69, 0.57);
   }
 }
 
 ::ng-deep {
-@media only screen and (max-width: 463px) {
+  @media only screen and (max-width: 463px) {
     .mat-stepper-horizontal-line {
       display: none;
     }
     .mat-horizontal-stepper-header {
-     display: block!important;
-         margin-top: 26px!important;
-
+      display: block !important;
+      margin-top: 26px !important;
+    }
+    .mat-step-header {
+      text-align: -webkit-center;
+    }
+    .mat-horizontal-stepper-header-container {
+      justify-content: center;
     }
   }
 }

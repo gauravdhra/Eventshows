@@ -1,43 +1,164 @@
-<div class="landing-header">
-    <div class="container-fluid">
-      <div class="set-logo">
-        <img src="../../../assets/images/logo.png">
-    </div>
-        <div class="row">
-            <div class="set-input">
-                <!-- <i class="fa fa-search"></i> -->
-                <input class="fontAwesome" type="text" placeholder="&#xF002;   Search Events"/>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light  row">
+        <a class="navbar-brand" routerLink="/dashboard">
+            <img class="" src="../../assets/logos/Group 75.png" alt="" style="height: 71px;">
+        </a>
+
+        <button  (click)="toggle()"class="navbar-toggler sidenav-menu menu-button" type="button" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+
+        <!-- <button class="menu-button sidenav-menu" mat-button color="primary"(click)="sidenav.toggle()"><mat-icon>menu</mat-icon>
+        </button> -->
+        <!-- <button type="button" mat-button (click)="drawer.toggle()">
+          Toggle sidenav
+        </button> -->
+        
+
+        <!-- <mat-drawer-container class="example-container" autosize>
+          <mat-drawer #drawer class="example-sidenav" mode="side">
+            <p>Auto-resizing sidenav</p>
+            <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+            <button (click)="showFiller = !showFiller" mat-raised-button>
+              Toggle extra text
+            </button>
+          </mat-drawer>
+        
+        </mat-drawer-container> -->
+
+
+
+        <!-- <mat-menu #animals="matMenu">
+          <mat-form-field  floatLabel="never" height="100px" appearance="outline">
+            <mat-label>Search Event</mat-label>
+            <input mat-menu-item matInput>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <mat-form-field floatLabel="never">
+            <mat-label>Categories</mat-label>
+            <mat-select matNativeControl>
+              <mat-option *ngFor="let brand of categories" [value]="brand.value">
+                {{ brand.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+          <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+        </mat-menu>
+        
+        <mat-menu #vertebrates="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+          <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+          <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+          <button mat-menu-item>Birds</button>
+          <button mat-menu-item>Mammals</button>
+        </mat-menu>
+        
+        <mat-menu #invertebrates="matMenu">
+          <button mat-menu-item>Insects</button>
+          <button mat-menu-item>Molluscs</button>
+          <button mat-menu-item>Crustaceans</button>
+          <button mat-menu-item>Corals</button>
+          <button mat-menu-item>Arachnids</button>
+          <button mat-menu-item>Velvet worms</button>
+          <button mat-menu-item>Horseshoe crabs</button>
+        </mat-menu>
+        
+        <mat-menu #fish="matMenu">
+          <button mat-menu-item>Baikal oilfish</button>
+          <button mat-menu-item>Bala shark</button>
+          <button mat-menu-item>Ballan wrasse</button>
+          <button mat-menu-item>Bamboo shark</button>
+          <button mat-menu-item>Banded killifish</button>
+        </mat-menu>
+        
+        <mat-menu #amphibians="matMenu">
+          <button mat-menu-item>Sonoran desert toad</button>
+          <button mat-menu-item>Western toad</button>
+          <button mat-menu-item>Arroyo toad</button>
+          <button mat-menu-item>Yosemite toad</button>
+        </mat-menu>
+        
+        <mat-menu #reptiles="matMenu">
+          <button mat-menu-item>Banded Day Gecko</button>
+          <button mat-menu-item>Banded Gila Monster</button>
+          <button mat-menu-item>Black Tree Monitor</button>
+          <button mat-menu-item>Blue Spiny Lizard</button>
+          <button mat-menu-item disabled>Velociraptor</button>
+        </mat-menu> -->
+
+
+
+
+
+        <div class="navbarContent collapse navbar-collapse"[ngClass]="{ 'show': collapse}" id="navbarSupportedContent">
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+            <div class="nav-search form-field side-padding10">
+              <mat-form-field floatLabel="never" height="100px"appearance="outline">
+                <mat-label>Search Event</mat-label>
+                <input matInput >
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              </mat-form-field>
             </div>
-            <div class="dropdown col">
-            <div class="form-field">
-                <mat-form-field>
-                    <mat-label>Categories</mat-label>
-                    <mat-select>
-                      <mat-option *ngFor="let brand of brands" [value]="brand.value">
-                        {{ brand.viewValue }}
-                      </mat-option>
-                    </mat-select>
-                  </mat-form-field>
-            </div>
-            <div class="form-field">
-                <mat-form-field>
-                    <mat-label>All Dates</mat-label>
-                    <mat-select>
-                      <mat-option *ngFor="let brand of brands" [value]="brand.value">
-                        {{ brand.viewValue }}
-                      </mat-option>
-                    </mat-select>
-                  </mat-form-field>
-            </div>
+            <ul class="navbar-nav mr-auto" >
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <!-- <a class="nav-link dropdown-toggle" href="#" id="genresDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        All Genres
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="genresDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div> -->
+                    <div class="form-field side-padding10">
+                      <mat-form-field floatLabel="never">
+                        <mat-label>Categories</mat-label>
+                        <mat-select matNativeControl>
+                          <mat-option *ngFor="let brand of categories" [value]="brand.value">
+                            {{ brand.viewValue }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        All Dates
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div> -->
+                    <div class="form-field side-padding10">
+                      <mat-form-field floatLabel="never">
+                        <mat-label>All Dates</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let brand of dates" [value]="brand.value">
+                            {{ brand.viewValue }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                </li>
+            </ul>
+                <span class="navbar-text">
+                    <a class="nav-link" routerLink="/login">Sign in</a>
+                </span> 
+                <span class="navbar-text becomehost">
+                    <button routerLink="/signup" class="btn btn-outline-success my-2 my-sm-0" type="submit">Become a host</button>
+                </span>
+
         </div>
-        <div class="top-right-nav">
-            <div>
-                <button class="sign-in" [routerLink]="['/login']" routerLinkActive="router-link-active">Sign In</button>
-            </div>
-            <div>
-                <button [routerLink]="['/signup']" routerLinkActive="router-link-active">Become a host</button>
-            </div>
-        </div>
-        </div>
-    </div>
+    </nav>
 </div>
