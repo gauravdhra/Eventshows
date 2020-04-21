@@ -18,7 +18,9 @@
   display: -ms-flexbox;
   display: flex;
   height: calc(100vh - 50px);
-
+  * {
+    font-family: "Inter", sans-serif;
+  }
   .logoHolder {
     position: absolute;
     top: 0px;
